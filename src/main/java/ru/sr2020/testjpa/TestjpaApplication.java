@@ -13,6 +13,7 @@ import ru.sr2020.testjpa.database.repositories.PlayerRepository;
 
 import javax.persistence.EntityManager;
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootApplication
 @EntityScan(basePackages = {"ru.sr2020.testjpa.database.pojo" })
@@ -29,11 +30,20 @@ public class TestjpaApplication {
 		//Character b = new Character();
 		//b.setBodytype("matrix-jpa");
 
-		Player p = new Player();
+		Player p;/* = new Player();
 
 		p.setFio("Васисуарий Пупкинз");
 
-		rep.save(p);
+		rep.save(p);*/
+
+		Optional<Player> p1 = rep.findById(1);
+		if (p1.isPresent()) {
+			p = p1.get();
+			p.setFio("aaa");
+			p.getCharacters().size();
+			int a =-0;
+		}
+
 	}
 
 }

@@ -7,8 +7,9 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="TRACE" additivity="false">
+        <Root level="WARN" additivity="false">
             <AppenderRef ref="console"/>
         </Root>
+        <logger name="org.hibernate" value="ALL"/>
     </Loggers>
 </Configuration>

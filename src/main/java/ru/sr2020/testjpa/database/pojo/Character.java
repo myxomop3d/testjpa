@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 
@@ -21,7 +22,6 @@ public class Character {
 
     @Column
     private String hackerlogin;
-
     @Column
     private String hackerpwd;
     @Column

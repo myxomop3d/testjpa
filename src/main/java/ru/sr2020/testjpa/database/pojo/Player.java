@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "player")
 @Entity
@@ -19,4 +20,8 @@ public class Player {
   private int id;
   private String fio;
   private int joinid;
+
+  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @JoinColumn(name = "player_id")
+  private List<Character> characters;
 }
