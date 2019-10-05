@@ -13,12 +13,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { SrDynEditorComponent } from './sr-dyn-editor/sr-dyn-editor.component';
+import { SrFoundationRunsComponent } from './sr-foundation-runs/sr-foundation-runs.component';
 
 
 const appRoutes: Routes = [
   { path: 'start', component: AppSrHomeComponent,  },
   { path: 'players', component: SrPlayersGridComponent,  },
   { path: 'players/new', component: SrDynEditorComponent,  },
+  { path: 'foundation/runs', component: SrFoundationRunsComponent,  },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     AppSrHomeComponent,
     PageNotFoundComponent,
     SrPlayersGridComponent,
-    SrDynEditorComponent
+    SrDynEditorComponent,
+    SrFoundationRunsComponent
   ],
   imports: [
     BrowserModule,

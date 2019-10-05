@@ -3,7 +3,7 @@
 
     <div *ngFor="let meta of metadata" class="form-row">
       <mat-form-field>
-        <input matInput [placeholder]="meta.caption" [formControlName]="meta.name" [required]="meta.mandatory" >
+        <input matInput [placeholder]="meta.caption" [formControlName]="meta.name" [required]="meta.mandatory">
         <mat-error *ngIf="formGroup.controls[meta.name].invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
     </div>
