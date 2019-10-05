@@ -1,11 +1,4 @@
-package ru.sr2020.testjpa.database.pojo;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DynamicUpdate;
-
-import javax.persistence.*;
+package ru.sr2020.database.pojo;
 
 /*@Table(name = "body")
 @Entity

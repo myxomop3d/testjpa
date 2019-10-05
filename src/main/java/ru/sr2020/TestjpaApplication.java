@@ -1,22 +1,19 @@
-package ru.sr2020.testjpa;
+package ru.sr2020;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
-//import ru.sr2020.testjpa.database.pojo.Body;
-import ru.sr2020.testjpa.database.pojo.Character;
-//import ru.sr2020.testjpa.database.repositories.BodyRepository;
-import ru.sr2020.testjpa.database.pojo.Player;
-import ru.sr2020.testjpa.database.repositories.CharacterRepository;
-import ru.sr2020.testjpa.database.repositories.PlayerRepository;
+//import ru.sr2020.database.pojo.Body;
+//import ru.sr2020.database.repositories.BodyRepository;
+import ru.sr2020.database.pojo.Player;
+import ru.sr2020.database.repositories.PlayerRepository;
 
 import javax.persistence.EntityManager;
-import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
-@EntityScan(basePackages = {"ru.sr2020.testjpa.database.pojo" })
+@EntityScan(basePackages = {"ru.sr2020.database.pojo" })
 
 public class TestjpaApplication {
 

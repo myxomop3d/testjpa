@@ -1,7 +1,6 @@
-package ru.sr2020.testjpa.database;
+package ru.sr2020.database;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,8 +22,8 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({"classpath:/database.properties"})
-@ComponentScan({"ru.sr2020.testjpa.database"})
-@EnableJpaRepositories(basePackages = "ru.sr2020.testjpa.database.repositories")
+@ComponentScan({"ru.sr2020.database"})
+@EnableJpaRepositories(basePackages = "ru.sr2020.database.repositories")
 public class PersistenceJPAConfig {
 
     @Autowired
@@ -38,7 +37,7 @@ public class PersistenceJPAConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPackagesToScan("ru.sr2020.testjpa.database.pojo");
+        entityManagerFactoryBean.setPackagesToScan("ru.sr2020.database.pojo");
 
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);

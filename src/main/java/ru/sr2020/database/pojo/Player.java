@@ -1,4 +1,4 @@
-package ru.sr2020.testjpa.database.pojo;
+package ru.sr2020.database.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
