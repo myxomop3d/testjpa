@@ -10,26 +10,26 @@ export enum RoomState {
   waitMaster,
 }
 
-class RoomMeta {
+export interface RoomMeta {
   number: number;
 }
 
-class RoomInstance {
+export interface RoomInstance {
   meta: RoomMeta;
   state: RoomState;
 }
 
-class MatrixHost {
+export interface MatrixHost {
   name: string;
   rooms: Array<RoomInstance>;
 }
 
-class MatrixRunner {
+export interface MatrixRunner {
   name: string;
 }
 
 export interface Run {
   state: RunState;
   host: MatrixHost;
-  validators: Array<MatrixRunner>;
+  runners: Array<MatrixRunner>;
 }
